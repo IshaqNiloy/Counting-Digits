@@ -1,0 +1,14 @@
+def countingDigits(n):
+    dividend = n
+    count = 0
+    quotient = 1
+    while(quotient):
+        quotient = int(dividend / 10)
+        dividend = quotient
+        count += 1
+
+    return count
+
+txt = "The number of digits of {} is {}"
+num = int(input("Enter a number:"))
+print(txt.format(num, countingDigits(num)))
